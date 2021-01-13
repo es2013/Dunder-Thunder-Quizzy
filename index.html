@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dunder-Thunder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
     <!-- Start Button -->
-    <div class="container">
-        <h1 class="welcome">Dunder Thunder Quizzy!</h1>
-        <p class="description">I am Harvey, a computer. This is my quiz based on a tiny little paper company in Scranton. Test your knowledge by pressing the START button. Otherwise, get out of my offive </p>
-        <button class="btn" id="start">START</button>
-        <button class="btn" id="end">GOOD BYE</button>
+    <div class="container" id="dunderContainer">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="welcome">Dunder Thunder Quizzy!</h1>
+                <p class="description">I am Harvey, a computer. This is my quiz based on a tiny little paper company in Scranton. Test your knowledge by pressing the START button. Otherwise, get out of my offive </p>
+            </div>
+                
+        <div class="btn">
+            <button class="btn" id="start">START</button>
+            <button class="btn" id="end">GOOD BYE</button>
+        </div>
         <h2 id="countdown"></h2>
         <p id="main"></p>
     </div>
@@ -24,8 +31,8 @@
         <div class="countdown-time">Time Remaining: </div>
         <div class="timer_sec">15</div>
         <section >
-            <div class="questions"></div>
-            <div class="choices"></div>
+            <div class="quiz-text"></div>
+            <div class="choices-text"></div>
         </section>
     </div>
     <!-- Final Score -->

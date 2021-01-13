@@ -3,28 +3,28 @@ let dunderQuestions = [
     {
         id:1,
         question:"1. What is Dwights middle name?",
-        choices:["Danger", "Kirk","Kurt","Belsnickel"],
-        correct:"Kurt"   
+        choices:{a:"Danger", b:"Kirk",c:"Kurt",d:"Belsnickel"},
+        correct: "c" 
     } ,
     {
         id:2,
         question:"2. What was Ryan Howard's social app called?",
-        choices:["Meow","Chirp","Woof","Bark"],
-        correct:"Woof"
+        choices:{a:"Meow",b:"Chirp",c:"Woof",d:"Bark"},
+        correct:"c"
     }, 
     {
         id:3,
         question:"3. Would I rather be feared or loved?",
-        choices:["Loved","Feared","Hated","Both. I want people to be afraid of how much they love me"],
-        correct:"Both. I want people to be afraid of how much they love me"
+        choices:{a:"Loved",b:"Feared",c:"Hated",d:"Both. I want people to be afraid of how much they love me"},
+        correct:"d"
 
     },
     {
         id:4,
         question:"4. Michael Scott is...",
-        choices:["Tina Turner...always","Superman","Beyonce...always","Whitney...always"],
-        correct:"Beyonce...always"
-    }
+        choices:{a:"Tina Turner...always",b:"Superman",c:"Beyonce...always",d:"Whitney...always"},
+        correct:"c"
+    } 
 
 ]
 
@@ -33,34 +33,56 @@ var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
 var endBtn = document.getElementById('end');
-var quizEl = document.getElementById('quiz')
-
-
-// Timer that counts down from 5
-function countdown() {
-  var timeLeft = 10;
-
-  // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-  var timeInterval = setInterval(function() {
-    if(timeLeft>1) {
-      timeLeft--;
-      timerEl.textContent=timeLeft+" seconds remaining";
-    } else if (timeLeft===1){
-      timeLeft--;
-      timerEl.textContent=timeLeft+" second remaining";
-    }
-    else {
-      timerEl.textContent="";
-      clearInterval(timeInterval);
-      displayMessage();
-    
-  }
-}, 1000);
-}
+var submitBtn = document.getElementById('submit');
+var quizEl = document.getElementById('quiz');
+var choiceList = document.getElementById('choices')
 
 var impishScore=0;
 var admirableScore=0;
 var counter;
+
+//start button is selected the timer starts counting down
+startBtn.onclick = countdown;
+
+// Timer function that decreases by second
+function countdown() {
+    var timeLeft = 10;
+    // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    var timeInterval = setInterval(function() {
+      if(timeLeft>1) {
+        timeLeft--;
+        timerEl.textContent=timeLeft+" seconds remaining";
+      } else if (timeLeft===1){
+        timeLeft--;
+        timerEl.textContent=timeLeft+" second remaining";
+      }
+      else {
+        timerEl.textContent="";
+        clearInterval(timeInterval);
+        displayMessage();
+      
+    }
+  }, 1000);
+  }
+
+//function that will look at my dunderquestions array 
+function showQuestions(){
+   
+}
+//If the correct answer is selected, then incremement Admirable points by 1
+function correctSelected(correct){
+
+
+}
+
+
+
+
+
+
+
+
+
 
 function displayQuiz() {
 
@@ -81,4 +103,3 @@ function displayMessage() {
   }, 300);
 }
 
-startBtn.onclick = countdown;
