@@ -28,6 +28,8 @@ let dunderQuestions = [
 
 ]
 
+
+
 //define document elements that will be used 
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
@@ -36,13 +38,21 @@ var endBtn = document.getElementById('end');
 var submitBtn = document.getElementById('submit');
 var quizEl = document.getElementById('quiz');
 var choiceList = document.getElementById('choices')
-
 var impishScore=0;
 var admirableScore=0;
 var counter;
 
 //start button is selected the timer starts counting down
-startBtn.onclick = countdown;
+$("#start").on("click", function() {
+    //remove little harvey description
+    $(".description").hide();
+    console.log("quiz start button tracking?");
+
+});
+
+
+//start button is selected the timer starts counting down
+// startBtn.onclick = countdown;
 
 // Timer function that decreases by second
 function countdown() {
@@ -65,12 +75,15 @@ function countdown() {
   }, 1000);
   }
 
+  
+
 //function that will look at my dunderquestions array 
 function showQuestions(){
    
 }
 //If the correct answer is selected, then incremement Admirable points by 1
 function correctSelected(correct){
+    
 
 
 }

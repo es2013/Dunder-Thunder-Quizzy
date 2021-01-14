@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +8,69 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css" />
 </head>
+
 <body>
     <!-- Start Button -->
     <div class="container" id="dunderContainer">
         <div class="row">
             <div class="col-12">
                 <h1 class="welcome">Dunder Thunder Quizzy!</h1>
-                <p class="description">I am Harvey, a computer. This is my quiz based on a tiny little paper company in Scranton. Test your knowledge by pressing the START button. Otherwise, get out of my offive </p>
+                <p class="description">I am Harvey, a computer. This is my quiz based on a tiny little paper company in
+                    Scranton. Test your knowledge by pressing the START button. Otherwise, get out of my offive </p>
             </div>
-                
-        <div class="btn">
-            <button class="btn" id="start">START</button>
-            <button class="btn" id="end">GOOD BYE</button>
+            <div class="wrapper">
+                <button id="start" class="btn">Start Quiz</button>
+                <!-- close window if player decides to quit and not take quiz -->
+                <button id="end" class="btn" onclick="javascript:window.close()">Goodbye</button>
+            </div>
+            <h2 id="countdown"></h2>
+            <p id="main"></p>
         </div>
-        <h2 id="countdown"></h2>
-        <p id="main"></p>
-    </div>
-    <!-- Quiz Questions -->
-    <div class="quiz">
-        <section>
-        SAmple text to see how this looks
-        </section>
-        <div class="countdown-time">Time Remaining: </div>
-        <div class="timer_sec">15</div>
-        <section >
+        <!-- Quiz Container -->
+        <div class="col-lg-12" id="display">
             <div class="quiz-text"></div>
-            <div class="choices-text"></div>
-        </section>
-    </div>
-    <!-- Final Score -->
-    <div class="score">
-       
-        <div class="complete_text">All done!</div>
-        <div class="score_text">
+            <!-- multiple choice options -->
+            <ul id="button-choice"></ul>
+            <div class="is-correct">
+                <div class="timeup"></div>
+            </div>
+            <!-- quiz wrap up score talley -->
+            <div class="wrap-up" style="display:none">
+                <div id="message"></div>
+                <div id="admirableScore"></div>
+                <div id="impishScore"></div>
+            </div>
+            
+
         </div>
-    </div>
 
 
 
-    <footer>   
-        &copy;2021 Erika Salcedo
-    </footer>
-    <script src="assets/script.js"></script>
-    <!-- <script src="./assets/js/script.js"></script> -->
+
+
+  <!-- Countdown clock with text -->
+        <!-- <div class="row">
+          
+            <div class="countdown-time col-6">Time Remaining: </div>
+            <div class="timer_sec">15</div>
+           
+
+            <div class="quiz-text"></div>
+            <ul class="choices-text"></ul>
+            <div class="correct-answer">
+                <div class="timeout"></div>
+            </div>
+        </div> -->
+        <!-- Final Score -->
+
+
+
+        <footer>
+            &copy;2021 Erika Salcedo
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/script.js"></script>
+        <!-- <script src="./assets/js/script.js"></script> -->
 </body>
 
 </html>
