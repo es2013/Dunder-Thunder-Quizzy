@@ -30,7 +30,7 @@ let dunderQuestions = [
         id: 5,
         question: "5. Is it okay that this quiz is Office themed and not javascript themed? ",
         choices: ["I think so", "i hope so", "absolutely", "all of the above"],
-        correct: "Ball of the above"
+        correct: "all of the above"
     }
 
 ];
