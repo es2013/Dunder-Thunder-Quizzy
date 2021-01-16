@@ -25,6 +25,12 @@ let dunderQuestions = [
         question: "4. Michael Scott is...",
         choices: ["Tina Turner...always", "Superman", "Beyonce...always", "Whitney...always"],
         correct: "Beyonce...always"
+    },
+    {
+        id: 5,
+        question: "5. Is it okay that this quiz and not Office themed? ",
+        choices: ["I think so", "i hope so", "absolutely", "all of the above"],
+        correct: "Ball of the above"
     }
 
 ];
@@ -136,7 +142,7 @@ function quizComplete() {
     var message2 = document.createElement("h3");
     message2.textContent = "...That's what she said. or he said..."
     var score = document.createElement("p");
-    score.textContent = "You earned " + admirableScore + " admirable point(s) and " + impishScore + " impish points"
+    score.textContent = "You earned " + admirableScore + " admirable point(s) and " + impishScore + " impish point(s)"
     finished.appendChild(message1);
     finished.appendChild(message2);
     finished.appendChild(score);
