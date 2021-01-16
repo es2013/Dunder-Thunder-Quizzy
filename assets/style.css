@@ -30,11 +30,8 @@
       color: white;
     }
     .logo-image{
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-top: -6px;
+      width: 150px;
+      margin-top: 6px;
   }
   
   #main {

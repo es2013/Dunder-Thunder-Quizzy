@@ -12,13 +12,13 @@
 <body>
     <nav class="navbar navbar-dark">
         <div class="logo-image">
-            <img src="/assets/images/logo.png" alt-text="dunder-quiz">
+            <img src="./assets/images/office.png" class="logo-image" alt-text="dunder-quiz">
         </div>
 
         <ul class="navbar-nav">
-            <li class="nav-item"> Time Left: <span id="time-left">0</span></li>
-            <li class="nav-item"> Admirable: <span id="admirableScore">0</span></li>
-            <li class="nav-item"> Impish: <span id="impishScore">0</span></li>
+            <li class="nav-item"><strong> Admirable:</strong><span id="admirableScore">0</span></li>
+            <li class="nav-item"><strong>Impish:</strong><span id="impishScore">0</span></li>
+            <li class="nav-item"> <strong>Time Left:<br/></strong><span id="countdown"></span></li>
 
         </ul>
     </nav>
@@ -27,6 +27,7 @@
         <div class="row">
             <div class="offset-md-3"></div>
             <div class="col-12 main">
+                
                 <h1 class="welcome">Dunder Thunder Quizzy!</h1>
                 <p class="description">I am Harvey, a computer. This is my quiz based on a tiny little paper company in
                     Scranton. Test your knowledge by pressing the START button. Otherwise, get out of my offive </p>
@@ -38,16 +39,14 @@
                 <button id="end" class="btn" onclick="javascript:window.close()">Goodbye</button>
             </div>
         </div>
-        <footer>
+        <footer class="footer">
             &copy;2021 Erika Salcedo
         </footer>
 
     </div>
 
 
-    <footer>
-        &copy;2021 Erika Salcedo
-    </footer>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/script.js"></script>
     <!-- <script src="./assets/js/script.js"></script> -->
